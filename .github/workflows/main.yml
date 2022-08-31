@@ -35,6 +35,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: pin4everland
+        id: pin4everland
         uses: 4everland/pin4everland-action@main
         with:
           EVER_TOKEN: ${{secrets.EVER_TOKEN}}
