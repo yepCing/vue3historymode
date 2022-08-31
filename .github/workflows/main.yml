@@ -42,4 +42,4 @@ jobs:
           EVER_PROJECT_ID: ${{secrets.EVER_PROJECT_ID}}
           BUILD_LOCATION: "./dist"
       - name: Run a one-line script
-        run: echo ${{ steps.pin4everland.outputs.hash }} !!!!
+        run: echo ${{ steps.pin4everland.outputs.uri }}  !!!!
