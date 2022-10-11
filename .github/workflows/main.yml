@@ -39,7 +39,8 @@ jobs:
         uses: 4everland/pin4everland-action@main
         with:
           EVER_TOKEN: ${{secrets.EVER_TOKEN}}
-          EVER_PROJECT_ID: ${{secrets.EVER_PROJECT_ID}}
+          # EVER_PROJECT_ID: ${{secrets.EVER_PROJECT_ID}}
+          EVER_PROJECT_NAME: ${{secrets.EVER_PROJECT_NAME}}
           BUILD_LOCATION: "./dist"
       - name: Run a one-line script
         run: echo ${{ steps.pin4everland.outputs.uri }}  !!!!
