@@ -29,12 +29,10 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: track size
+      - name: install node_modules && build your project
         run: npm install && npm run build
         shell: bash
 
-      - name: console env
-        run: echo ${{secrets.EVER_PROJECT_NAME}}
       # Runs a set of commands using the runners shell
       - name: pin4everland
         id: pin4everland
@@ -42,9 +40,7 @@ jobs:
         with:
           EVER_TOKEN: ${{secrets.EVER_TOKEN}}
           # EVER_PROJECT_ID: ${{secrets.EVER_PROJECT_ID}}
-          # EVER_PROJECT_NAME: ${{secrets.EVER_PROJECT_NAME}}
-          EVER_PROJECT_NAME: vue3modehistory2
-
+          EVER_PROJECT_NAME: ${{secrets.EVER_PROJECT_NAME}}
           BUILD_LOCATION: "./dist"
       - name: Run a one-line script
-        run: echo ${{ steps.pin4everland.outputs.uri }}  !!!!
+        run: echo ${{ steps.pin4everland.outputs.uri }}
