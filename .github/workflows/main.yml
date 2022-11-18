@@ -30,8 +30,8 @@ jobs:
         shell: bash
 
   tag:
-    needs: wait-on-tests
     runs-on: ubuntu-latest
+
     outputs:
       new_tag: ${{ steps.github-tag-action.outputs.new_tag }}
       changelog: ${{ steps.github-tag-action.outputs.changelog }}
@@ -46,6 +46,7 @@ jobs:
           default_bump: patch
 
   release:
+    runs-on: ubuntu-latest
     needs: tag
     steps:
       - name: pin4everland
