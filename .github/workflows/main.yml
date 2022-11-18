@@ -35,7 +35,7 @@ jobs:
         with:
           EVER_TOKEN: ${{secrets.EVER_TOKEN}}
           # EVER_PROJECT_ID: ${{secrets.EVER_PROJECT_ID}}
-          EVER_PROJECT_NAME: "vue-test-ar"
+          EVER_PROJECT_NAME: "vue-test-ar-1"
           EVER_PROJECT_PLAT: "AR"
           BUILD_LOCATION: "./dist"
       - name: echo ipfs
