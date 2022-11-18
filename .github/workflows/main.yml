@@ -15,19 +15,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      - name: install dependencies && build your project
-        run: npm install && npm run build
-        shell: bash
+  # This workflow contains a single job called "tag"
 
   tag:
     runs-on: ubuntu-latest
@@ -54,7 +42,7 @@ jobs:
       - run: npm install
       - run: npm run build
         # shell: bash
-      - name: pin4everland
+      - name: Pin4everland
         id: pin4everland
         uses: 4everland/pin-action@v1.3
         with:
@@ -63,8 +51,8 @@ jobs:
           EVER_PROJECT_NAME: "vue-test-IPFS"
           EVER_PROJECT_PLAT: "IPFS"
           BUILD_LOCATION: "./dist"
-      - name: echo ipfs
-        run: echo ${{ steps.pin4everland.outputs.uri }}
+      # - name: echo ipfs
+      #   run: echo ${{ steps.pin4everland.outputs.uri }}
 
       - name: Release
         uses: actions/create-release@v1.1.0
@@ -79,7 +67,5 @@ jobs:
             - CIDv1: `${{ steps.pin4everland.outputs.uri }}`
             this is test form ipfs
             IPFS gateways:
-            - https://${{ steps.pin4everland.outputs.uri }}.ipfs.dweb.link/
-            - https://${{ steps.pin4everland.outputs.uri }}.ipfs.cf-ipfs.com/
-            - [ipfs://${{ steps.pin4everland.outputs.uri }}/](ipfs://${{ steps.pin4everland.outputs.uri }}/)
+            - ${{ steps.pin4everland.outputs.uri }}
             ${{ needs.tag.outputs.changelog }}
