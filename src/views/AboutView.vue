@@ -6,6 +6,8 @@
     <h3>sdsd</h3>
     <button @click="handleClick">按钮</button>
     <chart-map></chart-map>
+
+    88888
   </div>
 </template>
 <script>
