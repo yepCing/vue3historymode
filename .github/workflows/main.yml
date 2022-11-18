@@ -31,7 +31,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           release_branches: .*
-          custom_tag: 2.0.0
           default_bump: patch
 
   release:
@@ -42,7 +41,6 @@ jobs:
 
       - run: npm install
       - run: npm run build
-        # shell: bash
       - name: Pin4everland
         id: pin4everland
         uses: 4everland/pin-action@v1.3
