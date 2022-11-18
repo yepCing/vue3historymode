@@ -31,12 +31,12 @@ jobs:
 
       - name: pin4everland
         id: pin4everland
-        uses: 4everland/pin-action@main
+        uses: 4everland/pin-action@v1.3
         with:
           EVER_TOKEN: ${{secrets.EVER_TOKEN}}
           # EVER_PROJECT_ID: ${{secrets.EVER_PROJECT_ID}}
-          EVER_PROJECT_NAME: "vue-test-ar"
-          EVER_PROJECT_PLAT: "AR"
+          EVER_PROJECT_NAME: "vue-test-IPFS"
+          EVER_PROJECT_PLAT: "IPFS"
           BUILD_LOCATION: "./dist"
       - name: echo ipfs
         run: echo ${{ steps.pin4everland.outputs.uri }}
