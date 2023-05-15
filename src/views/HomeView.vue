@@ -1,5 +1,5 @@
 <template>
-  <div class="home">this is the first releas helloxsse</div>
+  <div class="home">this is the first releas hessslloxsse</div>
 </template>
 
 <script>
