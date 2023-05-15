@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is andasdasd about page</h1>
+    <h1>This is and2323232asdasd about page</h1>
     <h3>sdsdsdssdasdasd</h3>
     <h2>hahahahha</h2>
     <h3>sdsd</h3>
