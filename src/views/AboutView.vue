@@ -6,7 +6,7 @@
     <h3>sdsd</h3>
 
     <button @click="handleClick">按钮</button>
-    88888
+    88888 sds
   </div>
 </template>
 <script>
