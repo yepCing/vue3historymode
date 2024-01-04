@@ -1,7 +1,18 @@
 <template>
   <router-view />
-  1
+
+  <button @click="handleAbout">about</button>
 </template>
+
+<script>
+export default {
+  methods: {
+    handleAbout() {
+      this.$router.push("/about");
+    },
+  },
+};
+</script>
 
 <style>
 * {
