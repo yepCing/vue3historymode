@@ -13,5 +13,4 @@ module.exports = defineConfig({
       },
     },
   },
-  indexPath: "home.html",
 });
