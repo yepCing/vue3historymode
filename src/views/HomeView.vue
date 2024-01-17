@@ -1,5 +1,7 @@
 <template>
-  <div class="home">this is ssthe fidsdsrs222t resdasdasleas hessslloxsse</div>
+  <div class="home">
+    this 32323132is ssthe fidsdsrs222t resdasdasleas hessslloxsse
+  </div>
 </template>
 
 <script>
