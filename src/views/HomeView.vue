@@ -1,5 +1,5 @@
 <template>
-  <div class="home">this is ssthe firs222t resdasdasleas hessslloxsse</div>
+  <div class="home">this is ssthe fidsdsrs222t resdasdasleas hessslloxsse</div>
 </template>
 
 <script>
